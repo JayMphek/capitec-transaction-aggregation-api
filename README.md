@@ -5,7 +5,6 @@ A comprehensive, production-grade financial transaction aggregation and analytic
 ![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)
-![License](https://img.shields.io/badge/License-Capitec-red.svg)
 
 ---
 
