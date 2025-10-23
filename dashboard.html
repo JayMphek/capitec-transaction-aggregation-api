@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
     <div class="container">
         <div class="header">
@@ -49,65 +47,73 @@
             <button onclick="loadDashboard()">🔄 Refresh</button>
         </div>
 
+        <div id="filterInfo" class="filter-info" style="display: none;">
+            <span id="filterText"></span>
+            <button onclick="clearFilters()" class="clear-filters">✕ Clear Filters</button>
+        </div>
+
         <div id="error" class="error" style="display: none;"></div>
         <div id="loading" class="loading">Loading dashboard...</div>
 
         <div id="dashboard" style="display: none;">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <h3>Total Transactions</h3>
+                    <h3 id="totalTransactionsLabel">Total Transactions</h3>
                     <div class="value" id="totalTransactions">0</div>
-                    <div class="change">Last period</div>
+                    <div class="change" id="totalTransactionsChange">Last period</div>
                 </div>
                 <div class="stat-card positive">
-                    <h3>Total Income</h3>
+                    <h3 id="totalCreditsLabel">Total Income</h3>
                     <div class="value" id="totalCredits">R0</div>
-                    <div class="change">Credits received</div>
+                    <div class="change" id="totalCreditsChange">Credits received</div>
                 </div>
                 <div class="stat-card negative">
-                    <h3>Total Expenses</h3>
+                    <h3 id="totalDebitsLabel">Total Expenses</h3>
                     <div class="value" id="totalDebits">R0</div>
-                    <div class="change">Debits made</div>
+                    <div class="change" id="totalDebitsChange">Debits made</div>
                 </div>
                 <div class="stat-card">
-                    <h3>Net Amount</h3>
+                    <h3 id="netAmountLabel">Net Amount</h3>
                     <div class="value" id="netAmount">R0</div>
                     <div class="change" id="netChange">Balance change</div>
                 </div>
             </div>
 
-            <div class="charts-grid">
-                <div class="chart-card">
-                    <h3>📊 Spending by Category</h3>
-                    <canvas id="categoryChart"></canvas>
+            <div class="main-content-grid">
+                <div class="charts-container">
+                    <div class="chart-card" id="category-chart-card">
+                        <h3 id="merchantChartTitle">🏪 Top Merchants</h3>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                    <div class="chart-card" id="trends-chart-card">
+                        <h3>📈 Monthly Trends</h3>
+                        <canvas id="trendsChart"></canvas>
+                    </div>
                 </div>
-                <div class="chart-card">
-                    <h3>📈 Monthly Trends</h3>
-                    <canvas id="trendsChart"></canvas>
-                </div>
-            </div>
 
-            <div class="transactions-table">
-                <h3>💳 Recent Transactions</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Description</th>
-                            <th>Category</th>
-                            <th>Merchant</th>
-                            <th>Type</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody id="transactionsBody">
-                    </tbody>
-                </table>
+                <div class="transactions-table">
+                    <h3>💳 Recent Transactions</h3>
+                    <div class="transactions-table-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Merchant</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionsBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>

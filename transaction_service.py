@@ -12,8 +12,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class TransactionService:
-    """Business logic for transaction aggregation"""
-    
     def __init__(self):
         self.data_source = MockDataSource()
         logger.info(f"Initialized with {len(self.data_source.transactions)} transactions")
