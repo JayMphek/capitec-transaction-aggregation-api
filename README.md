@@ -1,6 +1,6 @@
 # Capitec Transaction Aggregation System
 
-A comprehensive, production-grade financial transaction aggregation and analytics platform built for the Capitec Graduate Program. This system provides real-time transaction data aggregation from multiple sources with an intuitive web dashboard and robust REST API.
+A comprehensive, production-grade financial transaction aggregation and analytics platform. This system provides mock real-time transaction data aggregation from multiple sources with an intuitive web dashboard and robust REST API.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)
@@ -10,7 +10,7 @@ A comprehensive, production-grade financial transaction aggregation and analytic
 
 ## 💡 Introduction
 
-The **Capitec Transaction Aggregation System** is a production-grade platform designed to **consolidate and analyze customer financial transaction data** from multiple sources, providing **real-time analytics** and **actionable financial insights**. It is accessible via a web dashboard and a high-performance **RESTful API** powered by **FastAPI**.
+The **Capitec Transaction Aggregation System** is a production-grade platform designed to **consolidate and analyze customer financial transaction data** from multiple mock sources, providing **real-time analytics** and **actionable financial insights**. It is accessible via a web dashboard and a high-performance **RESTful API** powered by **FastAPI**.
 
 ---
 
